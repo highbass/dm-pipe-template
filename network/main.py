@@ -1,5 +1,5 @@
 """Creates the Network Resource with VPC"""
-from common import default
+from ../common import default
 
 def GenerateConfig(context):
     """Creates the Compute Engine with network and firewall."""
