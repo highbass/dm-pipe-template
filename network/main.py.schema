@@ -1,0 +1,23 @@
+info:
+  title: Network Template
+  author: Zohaib
+  description: Creates a VPC with subnetworks.  ** TODO cleanup schema definition for main **
+  version: 1.0
+
+imports:
+  - path: vpc.py
+  - path: subnetwork.py
+
+
+required:
+  - auto-create-subnets
+
+properties:
+  network-ranges:
+    type: string
+    description: this field needs to be defined when autoCreateSubnets is set to false. VPC Network Range
+
+  auto-create-subnets:
+    type: boolean
+    default: true
+    description: weather to autocreate subnets, uses default 10.128.0.0/9 and spawns it one per region
